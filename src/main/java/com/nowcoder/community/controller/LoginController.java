@@ -122,7 +122,7 @@ public class LoginController implements CommunityConstant {
 
     @RequestMapping(path = "/login", method = RequestMethod.POST)
     public String login(String username, String password, String code, boolean rememberme,
-                        Model model/*, HttpSession session*/, HttpServletResponse response,
+                        Model model, HttpServletResponse response,
                         @CookieValue("kaptchaOwner") String kaptchaOwner) {
         // 检查验证码
         //String kaptcha = (String) session.getAttribute("kaptcha");

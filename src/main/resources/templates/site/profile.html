@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -68,10 +69,10 @@
 							<a class="nav-link active" th:href="@{|/user/profile/${userId}|}">个人信息</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="my-post.html" th:text="|${loginUser!=null&&userId==loginUser.id?'我的帖子':'TA的帖子'}|">我的帖子</a>
+							<a class="nav-link" th:href="@{|/user/post/${userId}|}" th:text="|${loginUser!=null&&userId==loginUser.id?'我的帖子':'TA的帖子'}|">我的帖子</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="my-reply.html" th:text="|${loginUser!=null&&userId==loginUser.id?'我的回复':'TA的回复'}|">我的回复</a>
+							<a class="nav-link" th:href="@{|/user/reply/${userId}|}" th:text="|${loginUser!=null&&userId==loginUser.id?'我的回复':'TA的回复'}|">我的回复</a>
 						</li>
 					</ul>
 				</div>
